@@ -1,23 +1,443 @@
-import { Head, Notes } from 'mdx-deck'
+import { Appear, Head, Notes, inlineCode, Image } from 'mdx-deck';
+import { FullScreenCode, Horizontal, Split, SplitRight } from 'mdx-deck/layouts';
+import { Box, Card, Flex, Text } from 'rebass';
 
-export { theme } from './theme'
+export { comic as theme } from 'mdx-deck/themes';
 
 <Head>
   <title>Presentation Title</title>
 </Head>
 
-# Hello
+# Developer Productivty
+
+Kaleb McKelvey 🚀
 
 ---
 
-## Edit this file
+# Agenda
 
-To create your presentation
+1. Dev Responsibilities
+1. Time vs Money / Impact
+1. Our responsibility as devs
+1. Defining Productivity
+1. Aspects of Productivity
+1. Productivity Tools / Demos
+
+---
+
+<div style={{display: 'flex'}}>
+  <div style={{padding: '2rem'}}>
+
+    | JR Dev   |
+    | -------- |
+    | Learning |
+    | Features |
+    | Bugs     |
+
+  </div>
+
+->
+
+  <div style={{padding: '2rem'}}>
+
+    | SR Dev       |
+    | -------------|
+    | Learning     |
+    | Features     |
+    | Mentoring    |
+    | Designing    |
+    | Architecting |
+
+  </div>
+
+->
+
+  <div style={{padding: '2rem'}}>
+
+    | Tech Lead     |
+    | --------------|
+    | Learning      |
+    | Features      |
+    | Mentoring     |
+    | Designing     |
+    | Architecting  |
+    | Strategy      |
+    | Managing      |
+    | Business Comm |
+
+  </div>
+</div>
+
+<Text fontSize={[3, 4, 5]} fontWeight='bold' color='tomato' marginTop='1rem'>
+  As responsibility increases, work hours stay approximately the same ->
+</Text>
 
 <Notes>
-Create speaker notes with the Notes component
+
+- Doing things faster imperative for more work
+
 </Notes>
 
 ---
 
-<https://github.com/jxnblk/mdx-deck>
+# Time VS Money
+
+---
+
+<Flex justifyContent='space-evenly' width={1}>
+  <Card
+    bg='#f6f6ff'
+    boxShadow='0 2px 16px rgba(0, 0, 0, 0.25)'
+    fontSize={[6, 7]}
+    marginRight='1rem'
+    my={5}
+    p={4}
+  >
+    <Text fontSize={[3, 3, 6]} fontWeight='bold' color='green' style={{textDecoration: 'underline'}}>
+      Average $ /hr
+    </Text>
+    <Text fontSize={[3, 3, 6]} fontWeight='regular' color='green'>
+      SE -> ~$35
+    </Text>
+    <Text fontSize={[3, 3, 6]} fontWeight='regular' color='green'>
+      Sr -> ~$57
+    </Text>
+  </Card>
+
+<Card
+  bg='#f6f6ff'
+  boxShadow='0 2px 16px rgba(0, 0, 0, 0.25)'
+  fontSize={[6, 7]}
+  marginLeft='5rem'
+  my={5}
+  p={4}
+>
+  <Text
+    fontSize={[3, 3, 6]}
+    fontWeight='bold'
+    color='tomato'
+    style={{ textDecoration: 'underline' }}
+  >
+    $ Wasted Over Time
+  </Text>
+  <Text fontSize={[3, 3, 6]} fontWeight='regular' color='tomato'>
+    1 hr => $63
+  </Text>
+  <Text fontSize={[3, 3, 6]} fontWeight='regular' color='tomato'>
+    1 day => $504
+  </Text>
+  <Text fontSize={[3, 3, 6]} fontWeight='regular' color='tomato'>
+    1 week => $2,540
+  </Text>
+  <Text fontSize={[3, 3, 6]} fontWeight='regular' color='tomato'>
+    1 month => $10,080
+  </Text>
+</Card>
+
+</Flex>
+
+<Notes>
+
+- Productivity saves Money
+
+- Saving money -> doing more work -> more value to NM
+
+</Notes>
+
+---
+
+# Elon Musk (👽) Quote
+
+> "If other people are putting in 40 hour work weeks and you’re putting in 100 hour work weeks, then even if you’re doing the same thing you know that you will achieve in 4 months what it takes them a year to achieve."
+
+<Notes>
+
+- just read quote, and go to next slide
+
+</Notes>
+
+---
+
+## But...we like work life balance ⚖️
+
+<Text fontSize={[3, 3, 6]} fontWeight='regular' color='tomato' lineHeight={1.1}>
+  So doing more per hour > working more hours
+</Text>
+
+---
+
+# Kaleb's Definition:
+
+<Box bg='tomato' fontSize={[6, 7]} padding='3rem'>
+  <Text fontSize={[3, 3, 6]} fontWeight='regular' color='black' lineHeight={1.1}>
+    Being able to do the same amount of tasks in less amount of time
+  </Text>
+</Box>
+
+<Notes>
+
+- You could work more hours to get more things done, OR do more tasks in those hours worked
+
+</Notes>
+
+---
+
+<Text
+  fontSize={[3, 3, 6]}
+  fontWeight='regular'
+  color='tomato'
+  style={{ textDecoration: 'underline' }}
+>
+  Aspects of Productivity
+</Text>
+
+<Card
+  bg='#f6f6ff'
+  boxShadow='0 2px 16px rgba(0, 0, 0, 0.25)'
+  fontSize={[6, 7]}
+  marginLeft='1rem'
+  my={5}
+  p={4}
+>
+  <Text fontSize={[3, 3, 6]} fontWeight='regular' color='green'>
+    - Workflow
+    - Tools
+    - Automation
+    -
+  </Text>
+
+</Card>
+
+<Notes>
+
+# Workflow
+
+- Get Things done
+- Pomodoro
+- Apps like Trello/Todoist/Notion/Todoist
+
+# Tools
+
+- Workflow Tools
+- Todolist Tools
+- Note / resources
+- Keyboard short cuts
+
+# Automation
+
+- keyboard short cut to open Apps
+- alfred workflows
+- templates / extensions
+- snippets
+
+</Notes>
+
+---
+
+# Disclaimer
+
+- I don't know everything
+- Mac / VS Code centric
+
+---
+
+# Mac Tools
+
+---
+
+export default Split;
+
+<Box padding='2rem'>
+
+- Alfred
+- Aliases
+- Functions
+- BTT
+
+</Box>
+
+<Box padding='2rem'>
+
+- Karabiner
+- Z
+- ZSH
+- Iterm 2
+
+</Box>
+
+<Notes>
+
+### Alfred
+
+- Snippets / workflows / mac commands / file search
+- snippet of email / local
+- use grid
+- dash reduce
+
+### Aliases / Functions
+
+- show alias / function file
+- show npm run dev and gcp / gcd
+
+### BTT / Karabiner Elements
+
+- caps lock => command control option shift
+- snap areas / hotkey snap area
+- open work station with hotkey / gestures
+
+### Z
+
+- Explain frequency
+- jump to directory
+
+### ZSH / Iterm
+
+- talk about theming / powerline
+- plugins - dont use them much
+
+</Notes>
+
+---
+
+# VS Code Extensions
+
+---
+
+export default Split;
+
+<Box marginRight='4rem'>
+
+- Auto Rename
+- Bookmarks
+- CSS Peek
+- Doc This
+- ESLint
+
+</Box>
+
+<Box marginLeft='3rem'>
+
+- Gitlab MR
+- GitLens
+- Path Intellisense
+
+</Box>
+
+<Notes>
+
+### Document This
+
+- Show a method header in test-class.jsx
+
+### GitLab MR
+
+- Show creating a new MR
+
+### Bookmarks
+
+- Disclosure test
+- Caps lock + t toggles, caps lock + J jumps
+
+</Notes>
+
+---
+
+export default Split;
+
+<Box marginRight='4rem'>
+
+- Prettier
+- Proj Manager
+- Relative Path
+- Settings Sync
+
+</Box>
+
+<Box marginLeft='3rem'>
+
+- SonarLint
+- Stylelint
+- React Refactor
+- Intellicode
+
+</Box>
+
+<Notes>
+
+### Prettier
+
+- show a quick reformat after messing up code in test-class.jsx
+
+### Proj Manager
+
+- show easily switch between directories
+
+### Settings Sync
+
+- shared settings across devices
+- explain gist / github token
+- start downloading settings
+
+</Notes>
+
+---
+
+# VS Code Snippets
+
+- Emmet
+- React/ES6 Snippets
+- Custom Snippets
+
+<Notes>
+
+### Emmet
+
+- Show a ul or ol example with classes
+- ul>li.item\$@3\*5
+- dont include slashes
+
+### React / ES6 Snippets
+
+- Show example of new imr / rcc for new component
+
+### Custom Snippets
+
+- show custom snippet javascript file
+- Show example eslint custom snippet - esdd in disclosure
+
+### Intellicode Extensions
+
+- show example of it being used
+
+### Revisit the settings sync to see if it finished
+
+</Notes>
+
+---
+
+## VS Code Shortcuts Demo
+
+<Notes>
+
+### Top Shortcuts
+
+use disclosure page
+
+- Balance inward / outward
+- cmd + d to multi select
+- alt + click to multi cursor
+-
+
+</Notes>
+
+---
+
+# Resources
+
+- [Mac Cheatsheet](https://macmost.com/printable-mac-keyboard-shortcut-page-for-macos-mojave.html)
+- [Emmet Cheatsheet](https://docs.emmet.io/cheat-sheet/)
+- [VS Code Shortcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
+
+---
+
+# Thank You

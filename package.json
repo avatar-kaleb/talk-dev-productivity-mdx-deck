@@ -3,11 +3,18 @@
   "name": "developer-productivity-talk",
   "version": "1.0.0",
   "scripts": {
-    "start": "mdx-deck deck.mdx",
+    "dev": "mdx-deck deck.mdx",
     "build": "mdx-deck build deck.mdx",
     "help": "mdx-deck"
   },
   "devDependencies": {
     "mdx-deck": "^2.0.5"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.10",
+    "@rebass/emotion": "^3.1.0",
+    "rebass": "^3.1.0",
+    "styled-components": "^4.2.0"
   }
 }
