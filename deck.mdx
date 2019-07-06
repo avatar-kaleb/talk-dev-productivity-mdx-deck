@@ -1,6 +1,8 @@
 import { Appear, Head, Notes, inlineCode, Image } from 'mdx-deck';
 import { FullScreenCode, Horizontal, Split, SplitRight } from 'mdx-deck/layouts';
 import { Box, Card, Flex, Text } from 'rebass';
+import FullScreenLayout from './components/full-screen-layout';
+import { ResponsiveContainer } from 'recharts';
 
 export { comic as theme } from 'mdx-deck/themes';
 
@@ -14,75 +16,44 @@ Kaleb McKelvey 🚀
 
 ---
 
-# Agenda
-
-1. Dev Responsibilities
-1. Time vs Money / Impact
-1. Our responsibility as devs
-1. Defining Productivity
-1. Aspects of Productivity
-1. Productivity Tools / Demos
+<Image src='./images/intro-slide.png' size={'70%'} />
 
 ---
 
-<div style={{display: 'flex'}}>
-  <div style={{padding: '2rem'}}>
+# Agenda
 
-    | JR Dev   |
-    | -------- |
-    | Learning |
-    | Features |
-    | Bugs     |
+1. Why Productivity?
+1. Wasted time
+1. Dev Responsibilities
+1. Defining Productivity
+1. Aspects of Productivity
+1. Videos / Demos
+1. Wrap up
 
-  </div>
+---
 
-->
+# Why Productivity?
 
-  <div style={{padding: '2rem'}}>
+💰 & ⏲️ & 📆
 
-    | SR Dev       |
-    | -------------|
-    | Learning     |
-    | Features     |
-    | Mentoring    |
-    | Designing    |
-    | Architecting |
-
-  </div>
-
-->
-
-  <div style={{padding: '2rem'}}>
-
-    | Tech Lead     |
-    | --------------|
-    | Learning      |
-    | Features      |
-    | Mentoring     |
-    | Designing     |
-    | Architecting  |
-    | Strategy      |
-    | Managing      |
-    | Business Comm |
-
-  </div>
-</div>
-
-<Text fontSize={[3, 4, 5]} fontWeight='bold' color='tomato' marginTop='1rem'>
-  As responsibility increases, work hours stay approximately the same ->
-</Text>
-
+<!-- prettier-ignore -->
 <Notes>
 
-- Doing things faster imperative for more work
+1. Devs cost money
+1. Time --- Responsibility / Career / worklife balance
+1. Sprint Deadlines / release deadlines
+
+## Ask the following:
+
+1. how many of you all care about your career?
+1. how many of you all feel stressed at times when deadlines are due
+1. have you felt like theres not enough time for the things to do?
 
 </Notes>
 
 ---
 
-# Time VS Money
-
----
+## Wasting Time Costs 💰
 
 <Flex justifyContent='space-evenly' width={1}>
   <Card
@@ -121,16 +92,16 @@ Kaleb McKelvey 🚀
     $ Wasted Over Time
   </Text>
   <Text fontSize={[3, 3, 6]} fontWeight='regular' color='tomato'>
-    1 hr => $63
+    1 hr => $47
   </Text>
   <Text fontSize={[3, 3, 6]} fontWeight='regular' color='tomato'>
-    1 day => $504
+    1 day => $376
   </Text>
   <Text fontSize={[3, 3, 6]} fontWeight='regular' color='tomato'>
-    1 week => $2,540
+    1 week => $1,880
   </Text>
   <Text fontSize={[3, 3, 6]} fontWeight='regular' color='tomato'>
-    1 month => $10,080
+    1 month => $7,520
   </Text>
 </Card>
 
@@ -139,34 +110,126 @@ Kaleb McKelvey 🚀
 <Notes>
 
 - Productivity saves Money
-
-- Saving money -> doing more work -> more value to NM
+- Saving money -> doing more work -> more value to the company
+- talk about time wasted in meetings
 
 </Notes>
 
 ---
 
-# Elon Musk (👽) Quote
+## Only so much ⏲️ & 👨‍💻
 
-> "If other people are putting in 40 hour work weeks and you’re putting in 100 hour work weeks, then even if you’re doing the same thing you know that you will achieve in 4 months what it takes them a year to achieve."
+<div style={{display: 'flex'}}>
+    <div style={{padding: '1rem'}}>
+
+    | Intern   |
+    | -------- |
+    | Learning |
+
+  </div>
+
+->
+
+  <div style={{padding: '1rem'}}>
+
+    | JR Dev   |
+    | -------- |
+    | Learning |
+    | Features |
+    | Bugs     |
+
+  </div>
+
+->
+
+  <div style={{padding: '1rem'}}>
+
+    | SR Dev       |
+    | -------------|
+    | Learning     |
+    | Features     |
+    | Mentoring    |
+    | Designing    |
+    | Architecting |
+
+  </div>
+
+->
+
+  <div style={{padding: '1rem'}}>
+
+    | Tech Lead     |
+    | --------------|
+    | Learning      |
+    | Features      |
+    | Mentoring     |
+    | Designing     |
+    | Architecting  |
+    | Strategy      |
+    | Managing      |
+    | Business Comm |
+
+  </div>
+</div>
+
+<Text fontSize={[3, 4, 5]} fontWeight='bold' color='tomato' marginTop='1rem'>
+  As responsibility increases, work hours stay ~40-50 / week ->
+</Text>
 
 <Notes>
 
-- just read quote, and go to next slide
+- Doing things faster imperative for more work & worklife balance
 
 </Notes>
 
 ---
 
-## But...we like work life balance ⚖️
+## Release 📆 are real
+
+<div
+  style={{
+    border: '.5rem solid tomato',
+    borderRadius: '1rem',
+    font: 'verdana',
+    maxWidth: '1500px',
+    lineHeight: '4rem',
+    textAlign: 'left',
+    padding: '1.5rem'
+  }}
+>
+  "If other people are putting in 40 hour work weeks and you’re putting in 100 hour work weeks, then
+  even if you’re doing the same thing you know that you will achieve in 4 months what it takes them
+  a year to achieve."
+  <br />- Elon Musk (👽)
+</div>
+
+<Notes>
+
+- some dev jobs (video game industry) are known for rotating doors due to work hours
+- Products and market competition require fast pivots and changes
+- leadership vs devs
+
+</Notes>
+
+---
+
+## But...we actually like work life balance ⚖️
 
 <Text fontSize={[3, 3, 6]} fontWeight='regular' color='tomato' lineHeight={1.1}>
   So doing more per hour > working more hours
 </Text>
 
+<br />
+
+<Appear>
+  <Text fontSize={[3, 3, 6]} fontWeight='regular' color='grey' lineHeight={1.1}>
+    also...we're not 👽s
+  </Text>
+</Appear>
+
 ---
 
-# Kaleb's Definition:
+# Productivity is 🔑:
 
 <Box bg='tomato' fontSize={[6, 7]} padding='3rem'>
   <Text fontSize={[3, 3, 6]} fontWeight='regular' color='black' lineHeight={1.1}>
@@ -174,9 +237,23 @@ Kaleb McKelvey 🚀
   </Text>
 </Box>
 
+<Appear>
+  <Text
+    fontSize={[3, 3, 6]}
+    fontWeight='regular'
+    color='green'
+    lineHeight={1.1}
+    style={{ marginTop: '1rem' }}
+  >
+    so...how do I get started Kaleb?
+  </Text>
+</Appear>
+
 <Notes>
 
 - You could work more hours to get more things done, OR do more tasks in those hours worked
+- Productivity helps your time balance by getting more done
+- Productivty helps in your career while you get more responsibility with same amount of time
 
 </Notes>
 
@@ -200,12 +277,8 @@ Kaleb McKelvey 🚀
   p={4}
 >
   <Text fontSize={[3, 3, 6]} fontWeight='regular' color='green'>
-    - Workflow
-    - Tools
-    - Automation
-    -
+    - Workflow - Tools - Automation -
   </Text>
-
 </Card>
 
 <Notes>
@@ -234,10 +307,168 @@ Kaleb McKelvey 🚀
 
 ---
 
-# Disclaimer
+# Workflow - GTD
 
-- I don't know everything
-- Mac / VS Code centric
+---
+
+<Image src='./images/getting-things-done-diagram.png' size={'40%'} style={{ maxWidth: '2100px' }} />
+
+<Notes>Image from Medium</Notes>
+
+---
+
+<div style={{ display: 'flex', flexDirection: 'column', maxHeight: '800px' }}>
+  <p>GTD - Trello Style</p>
+  <Image src='./images/gtd-trello-board.png' size={'65%'} style={{ maxWidth: '1845px' }} />
+</div>
+
+---
+
+<div style={{ display: 'flex', flexDirection: 'column', maxHeight: '1000px' }}>
+  <p>GTD Reference - OneNote </p>
+  <Image src='./images/one-note-example.png' size={'60%'} />
+</div>
+
+<Notes>I use this for my reference piece of GTD</Notes>
+
+---
+
+# Tools - VS Code IDE
+
+---
+
+### VS Code Snippets - React
+
+<Split>
+
+<div
+  dangerouslySetInnerHTML={{
+    __html: `
+      <video
+        style="max-width: 98%"
+        controls
+        muted
+        src="./videos/ExampleComponentSnippet.mp4"
+      />
+    `
+  }}
+/>
+
+<div
+  dangerouslySetInnerHTML={{
+    __html: `
+      <video
+        style="max-width: 98%"
+        controls
+        muted
+        src="./videos/ExampleComponentTyped.mp4"
+      />
+    `
+  }}
+/>
+
+<Notes>
+  - Explain Snippets in VS Code - Show first video, then second video, then first video again - Do
+  quick calculations on amount of time saved based on # of components per day
+</Notes>
+
+</Split>
+
+---
+
+### VS Code Extensions - Settings Sync
+
+<div
+  dangerouslySetInnerHTML={{
+    __html: `
+      <video
+        style="max-width: 70%; margin-bottom: 5%"
+        controls
+        muted
+        src="./videos/ExampleSyncSettingsMixedSpeeds.mp4"
+      />
+    `
+  }}
+/>
+
+<Notes>- Explain Sync Settings</Notes>
+
+---
+
+### VS Code Shortcuts - Multi-Cursor
+
+<Split>
+
+<div
+  dangerouslySetInnerHTML={{
+    __html: `
+      <video
+        style="max-width: 98%"
+        controls
+        muted
+        src="./videos/ExampleMultiCursorSlow.mp4"
+      />
+    `
+  }}
+/>
+
+<div
+  dangerouslySetInnerHTML={{
+    __html: `
+      <video
+        style="max-width: 98%"
+        controls
+        muted
+        src="./videos/ExampleMultiCursorFast.mp4"
+      />
+    `
+  }}
+/>
+
+<Notes>
+  - Explain Snippets in VS Code - Show first video, then second video, then first video again - Do
+  quick calculations on amount of time saved based on # of components per day
+</Notes>
+
+</Split>
+
+---
+
+# Tools - Mac Productivity Tools
+
+### See Apendix!
+
+---
+
+# Automation
+
+Talk about Zapier
+Recurring calendar events
+Not enough time to do any demos
+
+---
+
+### When is it worth increasing productivity?
+
+---
+
+<Image src='https://imgs.xkcd.com/comics/is_it_worth_the_time.png' size={'45%'} />
+
+---
+
+### Concluding Thoughts
+
+1. Productivity is important
+1. It's an on-going learning processess
+1. Appendix with resources of tools I use, didn't have time to demo all
+
+---
+
+### Q&A
+
+---
+
+# Appendix
 
 ---
 

@@ -8,13 +8,15 @@
     "help": "mdx-deck"
   },
   "devDependencies": {
-    "mdx-deck": "^2.0.5"
+    "mdx-deck": "^2.3.2"
   },
   "dependencies": {
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.10",
     "@rebass/emotion": "^3.1.0",
+    "accessible-html5-video-player": "^1.0.6",
     "rebass": "^3.1.0",
+    "recharts": "^1.6.2",
     "styled-components": "^4.2.0"
   }
 }
