@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "mdx-deck deck.mdx",
-    "build": "mdx-deck build deck.mdx",
+    "build": "mdx-deck build deck.mdx && mkdir -p dist/images && cp -r images dist && mkdir -p dist/videos && cp -r videos dist",
     "help": "mdx-deck"
   },
   "devDependencies": {
