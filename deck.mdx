@@ -3,11 +3,12 @@ import { FullScreenCode, Horizontal, Split, SplitRight } from 'mdx-deck/layouts'
 import { Box, Card, Flex, Text } from 'rebass';
 import FullScreenLayout from './components/full-screen-layout';
 import { ResponsiveContainer } from 'recharts';
+import { COLORS, FONT_WEIGHTS, IMAGE_URLS, SMALL_BOX_SHADOW, VIDEO_URLS } from './constants.js';
 
 export { comic as theme } from 'mdx-deck/themes';
 
 <Head>
-  <title>Presentation Title</title>
+  <title>Developer Productivity</title>
 </Head>
 
 # Developer Productivty
@@ -16,7 +17,7 @@ Kaleb McKelvey 🚀
 
 ---
 
-<Image src='./images/intro-slide.png' size={'70%'} />
+<Image src={IMAGE_URLS.intro} size={'70%'} />
 
 ---
 
@@ -34,7 +35,7 @@ Kaleb McKelvey 🚀
 
 # Why Productivity?
 
-💰 & ⏲️ & 📆
+Money 💰 & Time ⏲️ & Deadlines 📆
 
 <!-- prettier-ignore -->
 <Notes>
@@ -57,27 +58,27 @@ Kaleb McKelvey 🚀
 
 <Flex justifyContent='space-evenly' width={1}>
   <Card
-    bg='#f6f6ff'
-    boxShadow='0 2px 16px rgba(0, 0, 0, 0.25)'
+    bg={COLORS.white}
+    boxShadow={SMALL_BOX_SHADOW}
     fontSize={[6, 7]}
     marginRight='1rem'
     my={5}
     p={4}
   >
-    <Text fontSize={[3, 3, 6]} fontWeight='bold' color='green' style={{textDecoration: 'underline'}}>
+    <Text fontSize={[3, 3, 6]} fontWeight='bold' color={COLORS.green} style={{textDecoration: 'underline'}}>
       Average $ /hr
     </Text>
-    <Text fontSize={[3, 3, 6]} fontWeight='regular' color='green'>
+    <Text fontSize={[3, 3, 6]} fontWeight={FONT_WEIGHTS.regular} color={COLORS.green} style={{ textAlign: 'left' }}>
       SE -> ~$35
     </Text>
-    <Text fontSize={[3, 3, 6]} fontWeight='regular' color='green'>
+    <Text fontSize={[3, 3, 6]} fontWeight={FONT_WEIGHTS.regular} color={COLORS.green} style={{ textAlign: 'left' }}>
       Sr -> ~$57
     </Text>
   </Card>
 
 <Card
-  bg='#f6f6ff'
-  boxShadow='0 2px 16px rgba(0, 0, 0, 0.25)'
+  bg={COLORS.white}
+  boxShadow={SMALL_BOX_SHADOW}
   fontSize={[6, 7]}
   marginLeft='5rem'
   my={5}
@@ -86,21 +87,41 @@ Kaleb McKelvey 🚀
   <Text
     fontSize={[3, 3, 6]}
     fontWeight='bold'
-    color='tomato'
+    color={COLORS.red}
     style={{ textDecoration: 'underline' }}
   >
     $ Wasted Over Time
   </Text>
-  <Text fontSize={[3, 3, 6]} fontWeight='regular' color='tomato'>
+  <Text
+    fontSize={[3, 3, 6]}
+    fontWeight={FONT_WEIGHTS.regular}
+    color={COLORS.red}
+    style={{ textAlign: 'left' }}
+  >
     1 hr => $47
   </Text>
-  <Text fontSize={[3, 3, 6]} fontWeight='regular' color='tomato'>
-    1 day => $376
+  <Text
+    fontSize={[3, 3, 6]}
+    fontWeight={FONT_WEIGHTS.regular}
+    color={COLORS.red}
+    style={{ textAlign: 'left' }}
+  >
+    1 work day => $376
   </Text>
-  <Text fontSize={[3, 3, 6]} fontWeight='regular' color='tomato'>
+  <Text
+    fontSize={[3, 3, 6]}
+    fontWeight={FONT_WEIGHTS.regular}
+    color={COLORS.red}
+    style={{ textAlign: 'left' }}
+  >
     1 week => $1,880
   </Text>
-  <Text fontSize={[3, 3, 6]} fontWeight='regular' color='tomato'>
+  <Text
+    fontSize={[3, 3, 6]}
+    fontWeight={FONT_WEIGHTS.regular}
+    color={COLORS.red}
+    style={{ textAlign: 'left' }}
+  >
     1 month => $7,520
   </Text>
 </Card>
@@ -108,7 +129,7 @@ Kaleb McKelvey 🚀
 </Flex>
 
 <Notes>
-
+- 1 hour per day wasted over time
 - Productivity saves Money
 - Saving money -> doing more work -> more value to the company
 - talk about time wasted in meetings
@@ -172,7 +193,7 @@ Kaleb McKelvey 🚀
   </div>
 </div>
 
-<Text fontSize={[3, 4, 5]} fontWeight='bold' color='tomato' marginTop='1rem'>
+<Text fontSize={[3, 4, 5]} fontWeight='bold' color={COLORS.red} marginTop='1rem'>
   As responsibility increases, work hours stay ~40-50 / week ->
 </Text>
 
@@ -188,7 +209,7 @@ Kaleb McKelvey 🚀
 
 <div
   style={{
-    border: '.5rem solid tomato',
+    border: `.5rem solid ${COLORS.red}`,
     borderRadius: '1rem',
     font: 'verdana',
     maxWidth: '1500px',
@@ -215,24 +236,29 @@ Kaleb McKelvey 🚀
 
 ## But...we actually like work life balance ⚖️
 
-<Text fontSize={[3, 3, 6]} fontWeight='regular' color='tomato' lineHeight={1.1}>
+<Text fontSize={[3, 3, 6]} fontWeight={FONT_WEIGHTS.regular} color={COLORS.red} lineHeight={1.1}>
   So doing more per hour > working more hours
 </Text>
 
 <br />
 
 <Appear>
-  <Text fontSize={[3, 3, 6]} fontWeight='regular' color='grey' lineHeight={1.1}>
+  <Text fontSize={[3, 3, 6]} fontWeight={FONT_WEIGHTS.regular} color='grey' lineHeight={1.1}>
     also...we're not 👽s
   </Text>
 </Appear>
 
 ---
 
-# Productivity is 🔑:
+# Productivity is 🔑
 
-<Box bg='tomato' fontSize={[6, 7]} padding='3rem'>
-  <Text fontSize={[3, 3, 6]} fontWeight='regular' color='black' lineHeight={1.1}>
+<Box bg={COLORS.red} fontSize={[6, 7]} padding='3rem'>
+  <Text
+    fontSize={[3, 3, 6]}
+    fontWeight={FONT_WEIGHTS.regular}
+    color={COLORS.black}
+    lineHeight={1.1}
+  >
     Being able to do the same amount of tasks in less amount of time
   </Text>
 </Box>
@@ -240,8 +266,8 @@ Kaleb McKelvey 🚀
 <Appear>
   <Text
     fontSize={[3, 3, 6]}
-    fontWeight='regular'
-    color='green'
+    fontWeight={FONT_WEIGHTS.regular}
+    color={COLORS.green}
     lineHeight={1.1}
     style={{ marginTop: '1rem' }}
   >
@@ -261,22 +287,22 @@ Kaleb McKelvey 🚀
 
 <Text
   fontSize={[3, 3, 6]}
-  fontWeight='regular'
-  color='tomato'
+  fontWeight={FONT_WEIGHTS.regular}
+  color={COLORS.red}
   style={{ textDecoration: 'underline' }}
 >
   Aspects of Productivity
 </Text>
 
 <Card
-  bg='#f6f6ff'
-  boxShadow='0 2px 16px rgba(0, 0, 0, 0.25)'
+  bg={COLORS.white}
+  boxShadow={SMALL_BOX_SHADOW}
   fontSize={[6, 7]}
   marginLeft='1rem'
   my={5}
   p={4}
 >
-  <Text fontSize={[3, 3, 6]} fontWeight='regular' color='green'>
+  <Text fontSize={[3, 3, 6]} fontWeight={FONT_WEIGHTS.regular} color={COLORS.green}>
     - Workflow - Tools - Automation -
   </Text>
 </Card>
@@ -311,7 +337,7 @@ Kaleb McKelvey 🚀
 
 ---
 
-<Image src='./images/getting-things-done-diagram.png' size={'40%'} style={{ maxWidth: '2100px' }} />
+<Image src={IMAGE_URLS.gtd} size={'40%'} style={{ maxWidth: '2100px' }} />
 
 <Notes>Image from Medium</Notes>
 
@@ -319,14 +345,14 @@ Kaleb McKelvey 🚀
 
 <div style={{ display: 'flex', flexDirection: 'column', maxHeight: '800px' }}>
   <p>GTD - Trello Style</p>
-  <Image src='./images/gtd-trello-board.png' size={'65%'} style={{ maxWidth: '1845px' }} />
+  <Image src={IMAGE_URLS.trello} size={'65%'} style={{ maxWidth: '1845px' }} />
 </div>
 
 ---
 
 <div style={{ display: 'flex', flexDirection: 'column', maxHeight: '1000px' }}>
   <p>GTD Reference - OneNote </p>
-  <Image src='./images/one-note-example.png' size={'60%'} />
+  <Image src={IMAGE_URLS.onenote} size={'60%'} />
 </div>
 
 <Notes>I use this for my reference piece of GTD</Notes>
@@ -348,7 +374,7 @@ Kaleb McKelvey 🚀
         style="max-width: 98%"
         controls
         muted
-        src="./videos/ExampleComponentSnippet.mp4"
+        src="${VIDEO_URLS.typedComponent}"
       />
     `
   }}
@@ -361,7 +387,7 @@ Kaleb McKelvey 🚀
         style="max-width: 98%"
         controls
         muted
-        src="./videos/ExampleComponentTyped.mp4"
+        src="${VIDEO_URLS.snippetComponent}"
       />
     `
   }}
@@ -385,7 +411,7 @@ Kaleb McKelvey 🚀
         style="max-width: 70%; margin-bottom: 5%"
         controls
         muted
-        src="./videos/ExampleSyncSettingsMixedSpeeds.mp4"
+        src="${VIDEO_URLS.syncSettings}"
       />
     `
   }}
@@ -406,7 +432,7 @@ Kaleb McKelvey 🚀
         style="max-width: 98%"
         controls
         muted
-        src="./videos/ExampleMultiCursorSlow.mp4"
+        src="${VIDEO_URLS.multiCursorSlow}"
       />
     `
   }}
@@ -419,7 +445,7 @@ Kaleb McKelvey 🚀
         style="max-width: 98%"
         controls
         muted
-        src="./videos/ExampleMultiCursorFast.mp4"
+        src="${VIDEO_URLS.multiCursorFast}"
       />
     `
   }}
@@ -442,17 +468,26 @@ Kaleb McKelvey 🚀
 
 # Automation
 
+<Notes>
+
 Talk about Zapier
 Recurring calendar events
 Not enough time to do any demos
+
+</Notes>
 
 ---
 
 ### When is it worth increasing productivity?
 
----
+https://c.albert-thompson.com/xkcd/
 
-<Image src='https://imgs.xkcd.com/comics/is_it_worth_the_time.png' size={'45%'} />
+<Notes>
+  See if i make it to this in time
+
+Show calculation of examples: 1.
+
+</Notes>
 
 ---
 
@@ -464,7 +499,11 @@ Not enough time to do any demos
 
 ---
 
-### Q&A
+### Contact Info
+
+- LinkedIn: [Kaleb McKelvey](https://www.linkedin.com/in/kaleb-mckelvey/)
+- Twitter: [@KalebMcKelvey](https://twitter.com/KalebMcKelvey)
+- Instagram: [@on_the_journey3](https://www.instagram.com/on_the_journey3/)
 
 ---
 
@@ -641,23 +680,6 @@ export default Split;
 - show example of it being used
 
 ### Revisit the settings sync to see if it finished
-
-</Notes>
-
----
-
-## VS Code Shortcuts Demo
-
-<Notes>
-
-### Top Shortcuts
-
-use disclosure page
-
-- Balance inward / outward
-- cmd + d to multi select
-- alt + click to multi cursor
--
 
 </Notes>
 
