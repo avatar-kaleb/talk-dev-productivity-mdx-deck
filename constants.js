@@ -2,11 +2,13 @@ export const COLORS = {
   black: 'black',
   green: 'green',
   red: 'tomato',
-  white: '#f6f6ff'
+  white: '#f6f6ff',
+  blue: '#13588e'
 };
 
 export const FONT_WEIGHTS = {
-  regular: 'regular'
+  regular: 'regular',
+  bold: 'bold'
 };
 
 export const IMAGE_URLS = {
