@@ -13,7 +13,9 @@ export const IMAGE_URLS = {
   gtd: './images/getting-things-done-diagram.png',
   intro: './images/intro-slide.png',
   onenote: './images/one-note-example.png',
-  trello: './images/gtd-trello-board.png'
+  tasks: './images/task-versus-relationship-model-grid-mental-model-630x420',
+  trello: './images/gtd-trello-board.png',
+  quadrant: './images/covey-quadrant.jpg'
 };
 
 export const SMALL_BOX_SHADOW = '0 2px 16px rgba(0, 0, 0, 0.25)';
