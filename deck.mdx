@@ -5,7 +5,10 @@ import FullScreenLayout from './components/full-screen-layout';
 import { ResponsiveContainer } from 'recharts';
 import { COLORS, FONT_WEIGHTS, IMAGE_URLS, SMALL_BOX_SHADOW, VIDEO_URLS } from './constants.js';
 
-export { comic as theme } from 'mdx-deck/themes';
+import { comic } from 'mdx-deck/themes';
+import customTheme from './theme';
+
+export const themes = [comic, customTheme];
 
 <Head>
   <title>Developer Productivity</title>
@@ -24,8 +27,8 @@ Kaleb McKelvey 🚀
 # Agenda
 
 1. Why Productivity?
-1. Wasted time
-1. Dev Responsibilities
+1. Don't waste time!
+1. Career Responsibilities vs Time
 1. Defining Productivity
 1. Aspects of Productivity
 1. Videos
@@ -65,7 +68,7 @@ Money 💰 & Time ⏲️ & Deadlines 📆
     my={5}
     p={4}
   >
-    <Text fontSize={[3, 3, 6]} fontWeight='bold' color={COLORS.green} style={{textDecoration: 'underline'}}>
+    <Text fontSize={[3, 3, 6]} fontWeight={FONT_WEIGHTS.bold} color={COLORS.green} style={{textDecoration: 'underline'}}>
       Average $ /hr
     </Text>
     <Text fontSize={[3, 3, 6]} fontWeight={FONT_WEIGHTS.regular} color={COLORS.green} style={{ textAlign: 'left' }}>
@@ -86,7 +89,7 @@ Money 💰 & Time ⏲️ & Deadlines 📆
 >
   <Text
     fontSize={[3, 3, 6]}
-    fontWeight='bold'
+    fontWeight={FONT_WEIGHTS.bold}
     color={COLORS.red}
     style={{ textDecoration: 'underline' }}
   >
@@ -177,7 +180,7 @@ Money 💰 & Time ⏲️ & Deadlines 📆
 
 ->
 
-  <div style={{padding: '1rem'}}>
+  <div style={{padding: '1rem 1rem 0 1rem'}}>
 
     | Tech Lead     |
     | --------------|
@@ -193,7 +196,7 @@ Money 💰 & Time ⏲️ & Deadlines 📆
   </div>
 </div>
 
-<Text fontSize={[3, 4, 5]} fontWeight='bold' color={COLORS.red} marginTop='1rem'>
+<Text fontSize={[3, 4, 5]} fontWeight={FONT_WEIGHTS.bold} color={COLORS.red} marginTop='1rem'>
   As responsibility increases, work hours stay ~40-50 / week ->
 </Text>
 
@@ -209,7 +212,7 @@ Money 💰 & Time ⏲️ & Deadlines 📆
 
 <div
   style={{
-    border: `.5rem solid ${COLORS.red}`,
+    border: `.5rem solid ${COLORS.blue}`,
     borderRadius: '1rem',
     font: 'verdana',
     maxWidth: '1500px',
@@ -519,9 +522,9 @@ Not enough time to do any demos
 
 ### Concluding Thoughts
 
-1. Productivity is important
-1. It's an on-going learning processess
-1. Appendix with resources of tools I use, didn't have time to demo all
+1. Productivity is a career VIP
+1. It's an on-going learning experience
+1. Check out the appendix!
 
 ---
 
