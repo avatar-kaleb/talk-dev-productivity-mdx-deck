@@ -1,4 +1,10 @@
-# mdx-deck basic template
+# Talk Summary
+
+Senior developers mentor, lead, architect, and code all while staying on top of new tech trends, extinguishing production fires, and completing certifications. Sound like a tough time management task? it certainly is! That's where I come in - I'll show you how efficient developers use top apps, extensions, shortcuts, and workflows to continuously increase your productivity, and just as important, your career!
+
+---
+
+## mdx-deck basic template
 
 This was generated with [mdx-deck][]'s `npm init deck` command.
 
