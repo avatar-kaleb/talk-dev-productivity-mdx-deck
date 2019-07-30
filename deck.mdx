@@ -32,7 +32,6 @@ Kaleb McKelvey 🚀
 1. Defining Productivity
 1. Aspects of Productivity
 1. Videos
-1. Concluding Thoughts
 
 ---
 
@@ -343,7 +342,7 @@ Money 💰 & Time ⏲️ & Deadlines 📆
 
 <Image
   src={IMAGE_URLS.gtd}
-  size={'50%'}
+  size={'35%'}
   style={{ marginTop: '50px', marginBottom: '50px', maxWidth: '1500px' }}
 />
 
@@ -364,7 +363,7 @@ Money 💰 & Time ⏲️ & Deadlines 📆
 
 ---
 
-<Image src={IMAGE_URLS.trello} size={'85%'} style={{ maxWidth: '2100px' }} />
+<Image src={IMAGE_URLS.trello} size={'75%'} style={{ maxWidth: '2100px' }} />
 
 ---
 
@@ -441,7 +440,7 @@ Money 💰 & Time ⏲️ & Deadlines 📆
   dangerouslySetInnerHTML={{
     __html: `
       <video
-        style="max-width: 85%; margin-bottom: 5%"
+        style="max-width: 65%; margin-bottom: 5%"
         controls
         muted
         src="${VIDEO_URLS.syncSettings}"
@@ -550,7 +549,7 @@ Not enough time to do any demos
 
 ---
 
-export default Split;
+<Split>
 
 <Box padding='2rem'>
 
@@ -570,6 +569,8 @@ export default Split;
 - z or autojump for zsh
 
 </Box>
+
+</Split>
 
 <Notes>
 
@@ -609,7 +610,7 @@ export default Split;
 
 ---
 
-export default Split;
+<Split>
 
 <Box marginRight='4rem'>
 
@@ -617,6 +618,11 @@ export default Split;
 - Bookmarks
 - Browser Preview
 - CSS Peek
+
+</Box>
+
+<Box marginLeft='3rem'>
+
 - Doc This
 - ESLint
 - ES7/React/Redux snippets
@@ -625,77 +631,36 @@ export default Split;
 
 </Box>
 
-<Box marginLeft='3rem'>
+</Split>
 
+---
+
+<Split>
+
+<Box marginRight='4rem'>
+
+- Intellicode
 - Metago
 - Nightowl THeme
 - Path Intellisense
 - Prettier
 - Project Manager
-- Relative Path
-- Sass
-- Settings Sync
-- Stylelint
-- vscode-icons
-
-</Box>
-
-<Notes>
-
-### Document This
-
-- Show a method header in test-class.jsx
-
-### GitLab MR
-
-- Show creating a new MR
-
-### Bookmarks
-
-- Disclosure test
-- Caps lock + t toggles, caps lock + J jumps
-
-</Notes>
-
----
-
-export default Split;
-
-<Box marginRight='4rem'>
-
-- Prettier
-- Proj Manager
-- Relative Path
-- Settings Sync
 
 </Box>
 
 <Box marginLeft='3rem'>
 
+- React Refactor
+- Relative Path
+- Sass
+- Settings Sync
 - SonarLint
 - Stylelint
-- React Refactor
-- Intellicode
+- vscode-icons
 
 </Box>
 
-<Notes>
-
-### Prettier
-
-- show a quick reformat after messing up code in test-class.jsx
-
-### Proj Manager
-
-- show easily switch between directories
-
-### Settings Sync
-
-- shared settings across devices
-- explain gist / github token
-- start downloading settings
-
-</Notes>
+</Split>
 
 ---
 
