@@ -16,7 +16,7 @@
     "@rebass/emotion": "^3.1.0",
     "accessible-html5-video-player": "^1.0.6",
     "rebass": "^3.1.0",
-    "recharts": "^1.6.2",
+    "recharts": "^2.1.14",
     "styled-components": "^4.2.0"
   }
 }
